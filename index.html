@@ -98,7 +98,7 @@
             font-weight: 300;
             font-size: clamp(2.8rem, 6vw, 6rem);
             letter-spacing: 0.3em;
-            margin-left: 0.3em;
+            padding-left: 0.3em;
             text-transform: uppercase;
             margin-top: 2rem;
             margin-bottom: 2rem;
@@ -118,7 +118,7 @@
             font-weight: 400;
             color: #6B6355;
             letter-spacing: 0.12em;
-            margin-left: 0.12em;
+            padding-left: 0.12em;
             margin-top: 2rem;
             text-transform: uppercase;
             opacity: 0;
@@ -144,7 +144,7 @@
             color: #6B6355;
             text-decoration: none;
             letter-spacing: 0.2em;
-            margin-left: 0.2em;
+            padding-left: 0.2em;
             text-transform: uppercase;
             position: relative;
             font-variant: small-caps;
@@ -168,16 +168,17 @@
         .established {
             position: fixed;
             bottom: 2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            right: 0;
+            text-align: center;
             font-family: 'EB Garamond', serif;
             font-size: 0.7rem;
             color: #6B6355;
             letter-spacing: 0.35em;
-            margin-left: 0.35em;
+            padding-left: 0.35em;
             text-transform: uppercase;
             opacity: 0;
-            animation: fadeIn 1.2s ease forwards;
+            animation: establishedFadeIn 1.2s ease forwards;
             animation-delay: 1.2s;
             z-index: 1;
         }
@@ -198,6 +199,11 @@
             }
         }
 
+        @keyframes establishedFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* Maintain centred feel on very short viewports */
         @media (max-height: 500px) {
             .established {
@@ -210,6 +216,7 @@
         @media (max-width: 480px) {
             .wordmark {
                 letter-spacing: 0.18em;
+                padding-left: 0.18em;
             }
             .contact {
                 margin-top: 2rem;
